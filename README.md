@@ -1,20 +1,43 @@
-# RepoGC
+![RepoGc — Investigate before changing it.](docs/assets/repogc-hero.png)
 
-Find what is worth tidying in a repository. Investigate before changing it.
+<p align="center">
+  <strong>A quieter way to review your repository.</strong><br>
+  Find stale information and broken references. Investigate with your AI. You decide.
+</p>
 
-RepoGC helps you and your AI investigate stale information, broken references
-and potentially redundant material. It collects evidence; you decide what to
-fix, clarify, keep or leave for later. **No reference does not mean no purpose.**
+<p align="center">
+  <a href="https://github.com/cooleryu/RepoGc/actions/workflows/ci.yml"><img src="https://github.com/cooleryu/RepoGc/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-a7d8c2?style=flat-square" alt="License: Apache-2.0"></a>
+  <img src="https://img.shields.io/badge/Python-3.11%2B-a7d8c2?style=flat-square" alt="Python 3.11 or newer">
+  <img src="https://img.shields.io/badge/status-experimental-e8c878?style=flat-square" alt="Experimental preview">
+</p>
 
-RepoGC 帮你找出仓库里值得整理的地方，查清依据，再交给你和你的 AI 决定怎么处理。
-默认检查仓库当前状态，不要求你先知道新增了什么，也不假设所有工作已经完成。
+<p align="center">
+  <a href="#quick-start">Quick start</a> ·
+  <a href="docs/first-review.md">Walkthrough</a> ·
+  <a href="docs/PHASE0_STATUS.zh-CN.md">中文说明</a> ·
+  <a href="https://github.com/cooleryu/RepoGc/issues">Give feedback</a>
+</p>
 
-**Early experimental version.** The current CLI performs deterministic checks
-over configured text files and shows at most five review cards. It does not
-understand an entire project, run an AI model, or delete files. Complete AI
-investigation and measured maintainer time savings remain unproven.
+---
 
-## Try a small example
+## Less guessing. More evidence.
+
+Repositories accumulate old plans, conflicting instructions and disconnected
+documents. RepoGC surfaces clues worth investigating—not a deletion list.
+
+**帮你找出仓库里值得整理的地方，查清依据，再由你和你的 AI 决定怎么处理。**
+检查当前状态，不预设新增模块，也不把“暂未使用”当作“应该删除”。
+
+| Observe | Investigate | Decide |
+| :--- | :--- | :--- |
+| RepoGC collects references, source locations and coverage limits. | You or your AI check context, actual impact and reasons to keep things. | You choose what to fix, clarify, retain or defer. |
+
+> **Experimental, read-only review.** The CLI performs deterministic text checks;
+> it does not run an AI model or delete files. Complete AI handoff and measurable
+> maintainer time savings are still being evaluated.
+
+## Quick start
 
 Python 3.11+ is required. There are no third-party runtime dependencies.
 Install from source in an isolated environment (macOS / Linux):
