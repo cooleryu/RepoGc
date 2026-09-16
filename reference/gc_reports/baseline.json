@@ -1,0 +1,1366 @@
+{
+  "baseline_schema_version": "0.1",
+  "config_hash": "528cf49ac4555e5bf192889c9168abe407036f29ef58850bdd97c15f93a55744",
+  "created_at": "2026-09-03T14:18:43.763561+00:00",
+  "findings": [
+    {
+      "category": "broken_reference",
+      "id": "dd2879a388176334dcfe79fa504354182bd48e56",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/README.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "05ed17a424877deeb0ef05948c47c71d11bcc455",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/observations.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "63476703b067e5bfcf72fac6145bdf4cbc5ccd43",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/plan.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "812b826acf5f72452e7ad6cacada462f86771823",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/research.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "b97476fec8cf9ede1dfa011e6b2b7100bf3ac78a",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/run-state.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "77badafc0af4d963b161ad73bbfcc94c0c8a7f6e",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/task-board.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "5c1eaacae2966c3cd778bf2fa545bf9c6c129323",
+      "source": "corpora/best-runtime-box.toml",
+      "target": ".harness/test-matrix.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e0e9624744273ef0d021d94ba2013a5925ca65d1",
+      "source": "corpora/best-runtime-box.toml",
+      "target": "corpora/.gitlab-ci.yml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "393915d6cd058133f065dc8c4cbac6f11c180308",
+      "source": "corpora/best-runtime-box.toml",
+      "target": "corpora/AGENTS.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1666d3ca3e095640cdd2a4ed7c74440fcef49252",
+      "source": "corpora/best-runtime-box.toml",
+      "target": "corpora/CLAUDE.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "5a74471b21f6911a4d154c9a49b23ebcd0b0f6d1",
+      "source": "corpora/best-runtime-box.toml",
+      "target": "corpora/package-lock.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "2026d57283db7d76551ef9818221f912d556fcec",
+      "source": "corpora/best-runtime-box.toml",
+      "target": "corpora/package.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c03c4a8817ea4db9729995564820c163f20b5457",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/.gitlab-ci.yml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "a725d5d13bb377047ee850642b7dd3864db5f005",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "95f230f36b98a11d18051f25186b7f5db0d18e81",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/core_principles_memo.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "67fb320528e8c62b1847ef9b08a926edb897e711",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/example.jsonl"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f3a19badf3d308cebfe7296acb580e9124cf98b3",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "042cfa3d64fb408a7e50b2f028928d5ff4fa0839",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/provenance_seal_mechanism.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "33473aad88d02a4e1db03aac751d05b40a8d8345",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "tools/guarded_push.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "d05fd861e3f125d43baf2d9d64ac7553e572872f",
+      "source": "docs/annotations.md",
+      "target": "docs/annotation-input.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "d1d38e15d150fc64c9635727b19a99feb1767e65",
+      "source": "docs/annotations.md",
+      "target": "docs/example.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "99756c28363511e83716063a5c30ee48a7fd88e0",
+      "source": "docs/annotations.md",
+      "target": "docs/gc_reports/annotations.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f201833d95481659cb2ca2612d1720f1302d6de8",
+      "source": "docs/configuration.md",
+      "target": "records/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e53e1aea1a901860f986963c16d615e2538e727a",
+      "source": "docs/decisions/0002-phase-0.5-evidence-graph.md",
+      "target": "docs/decisions/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "2f4f352e4d1e76681602f580e288e7cf73037a62",
+      "source": "docs/decisions/0005-phase-0.8-liveness-declarations.md",
+      "target": "records/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "86b062dc90a97f5f40dc463f9b17c8f9fb751f7e",
+      "source": "docs/evaluations/best-runtime-box-phase-0.5.md",
+      "target": ".harness/skills-runtime-evaluation-completion.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "a71fb5c78c78eab37c9e924895619e81981dac59",
+      "source": "docs/evaluations/best-runtime-box-phase-0.5.md",
+      "target": "PWD/corpora/best-runtime-box.toml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "462554d49d72f074d089f31cbbae1d2facaf008f",
+      "source": "docs/evaluations/best-runtime-box-phase-0.5.md",
+      "target": "docs/evaluations/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1407f1416c998fb8b22a7871409e1cdc51f0c06f",
+      "source": "docs/evaluations/best-runtime-box-phase-0.5.md",
+      "target": "docs/evaluations/observations.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7a9e4c875baa3491579bdaf8894d919265071b65",
+      "source": "docs/evaluations/best-runtime-box-phase-0.5.md",
+      "target": "docs/evaluations/result.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "98a5e642acb7432b19f830a25026293baf1037b9",
+      "source": "docs/evaluations/best-runtime-box-phase-0.5.md",
+      "target": "docs/evaluations/status.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "42615020c84af76003a3d4b569fd9f5ce94ed737",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": ".harness/README.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "9ab77539cee99a9d54999e59965a494d91ad764c",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": ".harness/observations.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7baed301d5d5c02a6b451ea13677363ffae142f8",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": ".harness/pitfalls.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "951427b65f28d070d33285f23c45fde2ec9d58de",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": ".harness/plan.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "4aef97293ac23ec99443b39fc30604a972848257",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": "src/providers/demo.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3dcf5369bc53e3d8604222d69c66ca301a9e61a4",
+      "source": "docs/evaluations/best-runtime-box-phase-0.7.md",
+      "target": ".harness/observations.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "2a52d7cd5b09074ae2a4c82139323ba749efeefb",
+      "source": "docs/evaluations/codex-provider-phase-0.10.md",
+      "target": ".harness/README.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "fbcb66bf2a3b471d0d5c7956437ea236140c888e",
+      "source": "docs/evaluations/codex-provider-phase-0.10.md",
+      "target": "docs/evaluations/meta.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "03e5417ec20fe9c2a4e5c6030b869827eeae7c11",
+      "source": "docs/evaluations/liveness-declarations-phase-0.8.md",
+      "target": "docs/evaluations/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e081886f71270ae0a009ca0449d7ab8da768da3f",
+      "source": "docs/evaluations/liveness-declarations-phase-0.8.md",
+      "target": "docs/evaluations/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "24ae1a04c9d7186fb5b1779c4bc25195f330ac0f",
+      "source": "repogc.toml",
+      "target": ".gitlab-ci.yml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "87e3a01a06e564ec367bb5695bfa2ac8138ff5f0",
+      "source": "repogc.toml",
+      "target": "AGENTS.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "bec9a9f4e406ad1324402a2a7e9cee38948b0561",
+      "source": "repogc.toml",
+      "target": "CLAUDE.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c821b8efecaba8cca1b30c0923848bd2b956b31f",
+      "source": "repogc.toml",
+      "target": "Cargo.toml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "8bc81c969533a67ab0a00e162232897a26acd3ae",
+      "source": "repogc.toml",
+      "target": "package.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "9edcd7671fa990dc66ab481deeb7fa889a3e46a9",
+      "source": "src/repogc/cli.py",
+      "target": "src/repogc/args.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "b94408d90aa0a582ec2772ecdcfec5bda21d4aa8",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/.gitlab-ci.yml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "9ae1ce3541ce60e7c563492b163e51960a53fe54",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/AGENTS.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "29ca7e34f707f608d42715acea335d6396cb1435",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/CLAUDE.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "993ec20cad3ec6fd393fe3f886a0197c74f1e676",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/Cargo.toml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "47b89f44b33e72529be697388a795fc79f15dad2",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/package.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7dbe4587ca74b325a200fda1b83ca9a51aae4a17",
+      "source": "src/repogc/graph.py",
+      "target": "src/repogc/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "a3a2190e885cfd5f1dfc8589d51d1441f7abcb09",
+      "source": "src/repogc/self_check.py",
+      "target": ".agents/skills/review/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ca34daaedbcbba0a99c03e25cea3e68caf59aecb",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ce3e6e6f0b609e2d36f10367b2cdebe505e9c459",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/core_principles_memo.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "966bf670de830592213ba523079e62895999bfc3",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/example.jsonl"
+    },
+    {
+      "category": "broken_reference",
+      "id": "9c215c69f6f2a51831d21a783bd1f842b62c3f85",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/fixture.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "69d4faf2eca11c36f214c7683c76ecfaa1d2fd01",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3acfc0f87de7a6521d5de10dc6a725b4c83037ec",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/provenance_seal_mechanism.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "d3439dad18131099ceb08f958062f50fbfab6b51",
+      "source": "src/repogc/self_check.py",
+      "target": "tools/guarded_push.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "245bfc616ff23360977de9af429ef5482c2667da",
+      "source": "tests/fixtures/golden-report/SKILL.md",
+      "target": "tests/fixtures/golden-report/missing.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "45bb8c60119516ea6abaee256e66a0a4f285d313",
+      "source": "tests/golden/minimal-report.json",
+      "target": "tests/golden/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "67e570cdd420f98cf080422980edf1dc9bb2176e",
+      "source": "tests/golden/minimal-report.json",
+      "target": "tests/golden/missing.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "63df128f5b605d8c0330e53737213c82935cc277",
+      "source": "tests/golden/minimal-report.json",
+      "target": "tests/golden/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "79a6df055ade397dd1aceb8f9a9899b6540da45b",
+      "source": "tests/test_annotations.py",
+      "target": "reference/baseline.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f4e75bc224a798f0228210454f166240155a2d36",
+      "source": "tests/test_annotations.py",
+      "target": "reports/annotations.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "300d649336e2467f61b75457e9ccb318e6c31c72",
+      "source": "tests/test_annotations.py",
+      "target": "reports/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "127cb9e08f856523bfe3cd1128f7d9a2fa07bcae",
+      "source": "tests/test_annotations.py",
+      "target": "reports/latest.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "af76cb636cc63424f5c87a912a078fe36611a465",
+      "source": "tests/test_annotations.py",
+      "target": "tests/annotation-input.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e52a0262cf246bc2fe0df23940c75b039c463293",
+      "source": "tests/test_annotations.py",
+      "target": "tests/annotations.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "758f32a96c63c214a7a973321b918653dba2dd48",
+      "source": "tests/test_annotations.py",
+      "target": "tests/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7608d0a9d447d34f8564f2c88c01e9456f0c4fae",
+      "source": "tests/test_annotations.py",
+      "target": "tests/outside.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "a7c52b46088636caa209af18c9fb72d0bd1bcf8d",
+      "source": "tests/test_annotations.py",
+      "target": "tests/oversized.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "0bcc0dc913997864cab482ccf5412dd9a3c77666",
+      "source": "tests/test_cli.py",
+      "target": "reference/baseline.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c4443212ac8787de766adad7f36d8caee151b9ce",
+      "source": "tests/test_cli.py",
+      "target": "reports/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "67f67f7b336b4b2e26e9fa9c2c9a91c4acc25c66",
+      "source": "tests/test_cli.py",
+      "target": "reports/latest.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "cdd9e53416cf46db27f69a9adfee569e08df65af",
+      "source": "tests/test_cli.py",
+      "target": "tests/baseline.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ba8f2df78cf868ee82941d57ec29679b1ef45d97",
+      "source": "tests/test_cli.py",
+      "target": "tests/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "dc30757192f17793696ea2ae61ea859f5debbb94",
+      "source": "tests/test_cli.py",
+      "target": "tests/latest.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3062ef39fc34242a4e701f854430f1e72923cd1a",
+      "source": "tests/test_evidence_graph.py",
+      "target": ".agents/skills/review/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f85311a18fdc28c207d6c7849ef3863215563d3e",
+      "source": "tests/test_evidence_graph.py",
+      "target": ".harness/compact-not-real.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "91c1765d9aebe995f1d26f8a9be746676ed476a9",
+      "source": "tests/test_evidence_graph.py",
+      "target": ".harness/compact-state.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "0c321c5067a116470dd2f60016205445512a0d47",
+      "source": "tests/test_evidence_graph.py",
+      "target": ".harness/design.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c442d10bc1aff88ad6cf7422ef9c73fb3efeade3",
+      "source": "tests/test_evidence_graph.py",
+      "target": ".harness/not-real.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3f5721c3d9427b9fe3746472ef038de519f87acf",
+      "source": "tests/test_evidence_graph.py",
+      "target": ".harness/task-board.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "2976fd17a01790c44565c72794da54ccd5a8ad2c",
+      "source": "tests/test_evidence_graph.py",
+      "target": "docs/contract.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "754a09b4de87b864070924050e8de0e1fdf7140a",
+      "source": "tests/test_evidence_graph.py",
+      "target": "src/index.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "fe20d4d66ee4ade2ef860de2d9f5dfa76fc69dca",
+      "source": "tests/test_evidence_graph.py",
+      "target": "src/missing.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3c1602ffc3ae2b1e936d2452d0145978a03f2ba2",
+      "source": "tests/test_evidence_graph.py",
+      "target": "src/runtime.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "459dc5f5b94416059f2cf41c6f18866b399b49c5",
+      "source": "tests/test_evidence_graph.py",
+      "target": "test/fixture.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c0f0004ab08b924aeef6a0d2faf5d9941994ced5",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "6b99f9e246dc2f5267fa64f6b1b8711a7f3d4622",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/compact-state.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e9e1d403e1c00928cb13665f81c52466d09c7ebb",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/contract.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3a2ebdac0b27b0c52fbf66293b78c6c6e93bf695",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/design.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1affb66ae39cadaf626e7b310ecd597d98fc97c5",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/fixture.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "efcad900f18a1ee6726eb62812243478ee3ac8fe",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/index.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "fb18809f7f095abcbd88e1aef2f01ac958c333cd",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/missing.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "b70b42c68ad90053240f38098445f99b561b4eb5",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/nprocess_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7563a2615c20c199d5cbafbae09a098c27c51ff6",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/package.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7a58c864c5cff73cc437fd456a53d8c44e506b10",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "08a0936ac09f0a0fe62d568bce3c6f601f4dde3b",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/runtime.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "78043dc2d1392bd2c97868ee196e0474230b13f5",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/runtime.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ff91f383801ebe2db58b867fad6d0f70f16ddad8",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/src/index.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "81d3d0722f60c16d931bb65828f16a2218410655",
+      "source": "tests/test_evidence_graph.py",
+      "target": "tests/task-board.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "250008085faeb2475fb9f013df1409b258e45a9c",
+      "source": "tests/test_golden_report.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "47508c273d0dab3344439e799a53aeec53375232",
+      "source": "tests/test_golden_report.py",
+      "target": "tests/minimal-report.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "17a0e9ec2e690f2af1a8a3459112ddf1c34b0d87",
+      "source": "tests/test_golden_report.py",
+      "target": "tests/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "d5712fe79a00e168ed9950b1b4ef2e63d17a0ef5",
+      "source": "tests/test_liveness.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "5268fd42a4c29842c7776b6649229b409485e354",
+      "source": "tests/test_liveness.py",
+      "target": "tests/missing_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "0a191e67a3ef3580a08b17b4fb5adb612d5cd29d",
+      "source": "tests/test_liveness.py",
+      "target": "tests/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "426936d02bb2f255026631da18877de7946aa650",
+      "source": "tests/test_liveness_declarations.py",
+      "target": "escape.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "3ef6f26c16155c3d4f9035611f9fe83ee52c701b",
+      "source": "tests/test_liveness_declarations.py",
+      "target": "logs/process.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "8a7177bbf29de275c6e853aa5f4fbf7385e29f95",
+      "source": "tests/test_liveness_declarations.py",
+      "target": "tests/artifact.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e2a5430a2807c40bfa55b931910654f8646df948",
+      "source": "tests/test_liveness_declarations.py",
+      "target": "tests/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "5f57e6b0be5a798a3a6dca1e32946cf9a81d42df",
+      "source": "tests/test_liveness_declarations.py",
+      "target": "tests/spec.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c87900a972743d37a85c1bc64286bd3263f7ba60",
+      "source": "tests/test_liveness_declarations.py",
+      "target": "tests/unmatched.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "8fcc234132b08c82ed02b920cf2cfbedfd2e631d",
+      "source": "tests/test_marker_context.py",
+      "target": ".harness/plan.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "b08993b77404d3419dd72b00942ed563d2fb60e3",
+      "source": "tests/test_marker_context.py",
+      "target": "generated/out.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ded10a71160bd68d9fd58518145f77d41f79e5ca",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c44b37bd317839b049d522efd73f8b3784455c9c",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/notes.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "d4a7e506ae069f332300c6684acb1811e5c1a1e1",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/out.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1368ebf1f65499cdbb28d30d223dbc41e1b36d0e",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/plan.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "16dabd9f4170ce318da183a3072f789fc2c13a30",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/run.sh"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f18edf5d4a2436832f7fd42de3e365cb79102373",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/sample.js"
+    },
+    {
+      "category": "broken_reference",
+      "id": "80c8489cdd457c39dd9db9c225911baa38d5d820",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/sample.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "7cb24ef22c97bc24ccda49f21cecd75954f31124",
+      "source": "tests/test_marker_context.py",
+      "target": "tests/sample.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "80e2a0e98205e1a9138af3f2e2daee2a89a681bd",
+      "source": "tests/test_project_contract.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ce0454e1635e1d13200eaa246589421be6442f41",
+      "source": "tests/test_project_contract.py",
+      "target": "tests/ci.yml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "887d7ddc766ffe0db403a44d128df50fc4966fa0",
+      "source": "tests/test_project_contract.py",
+      "target": "tests/openai.yaml"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c433d5300acb5026f7cff5a3cf94da90c9153808",
+      "source": "tests/test_regressions.py",
+      "target": "docs/live.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1514d1d763b8da127738a2dff71b27133dc3d96d",
+      "source": "tests/test_regressions.py",
+      "target": "nsrc/demo.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "bfbe0065bb95813b9bee63723a694298f7ce251a",
+      "source": "tests/test_regressions.py",
+      "target": "outside.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "b9030ff1f7aea2d74ef220d4239f4b6d647309f4",
+      "source": "tests/test_regressions.py",
+      "target": "reports/generated.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "e2f0683efdf247e6f2da295f8c0a4aa85f2cc7e4",
+      "source": "tests/test_regressions.py",
+      "target": "reports/phase0-bootstrap.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1033c9638870f782da330e116c8c479a6d3a0a69",
+      "source": "tests/test_regressions.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f31e22da6ca02c3516cc82a37be3547dad7df223",
+      "source": "tests/test_regressions.py",
+      "target": "tests/SOURCES.txt"
+    },
+    {
+      "category": "broken_reference",
+      "id": "cb76dcf82753f269e869e514d9978144b5a1f484",
+      "source": "tests/test_regressions.py",
+      "target": "tests/core_principles_memo.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "45b39896ac828ef31653ff5c6849b155fac9d642",
+      "source": "tests/test_regressions.py",
+      "target": "tests/example.jsonl"
+    },
+    {
+      "category": "broken_reference",
+      "id": "944ea3e7e32c1b10d177c66e9644cbb0688bc88d",
+      "source": "tests/test_regressions.py",
+      "target": "tests/generated.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "1f85d3553cc108b15fae96330d1bc48c26f6ea49",
+      "source": "tests/test_regressions.py",
+      "target": "tests/legacy.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "fe29240eeb1f762b1363a8db4bb7f2f024de5e11",
+      "source": "tests/test_regressions.py",
+      "target": "tests/live.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "de3e09a47b8ce9a899452ca9d6f7f0bd799965e2",
+      "source": "tests/test_regressions.py",
+      "target": "tests/notes.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f5f250577b5da6ed3a56c5ebb20bd1d99563579a",
+      "source": "tests/test_regressions.py",
+      "target": "tests/phase0-bootstrap.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "2e58c84cac5c092141be47a606e41b1944c4eee5",
+      "source": "tests/test_regressions.py",
+      "target": "tests/private-name.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c57a19c469adcdce566c2a473ea98f83812cf261",
+      "source": "tests/test_regressions.py",
+      "target": "tests/process_log.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "262ed96895109bb1bce75d67e8ed00ce94e72192",
+      "source": "tests/test_regressions.py",
+      "target": "tests/provenance_seal_mechanism.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "113811a46d5fbca1872686516e86aba39e3849e3",
+      "source": "tests/test_regressions.py",
+      "target": "tools/guarded_push.py"
+    },
+    {
+      "category": "broken_reference",
+      "id": "923496714d07e7a266655f0ae663b484b0c758a0",
+      "source": "tests/test_review_cli.py",
+      "target": "reference/baseline.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "841b78a756ebdfd14d376c67c0483adca1e485c1",
+      "source": "tests/test_review_cli.py",
+      "target": "reports/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "9c9e7d1051c94192850ea6a76d6f34c89da4a3dc",
+      "source": "tests/test_review_cli.py",
+      "target": "reports/latest.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "17cabbb8ba2d02e34f59b580bd24a200e2673b72",
+      "source": "tests/test_review_cli.py",
+      "target": "tests/baseline.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c5f413fee5d9d4b5031f338f81cb5bce8fa539cc",
+      "source": "tests/test_review_cli.py",
+      "target": "tests/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "ea9b5b7b4502e47b5a99b9d27704453bf937a7c2",
+      "source": "tests/test_review_cli.py",
+      "target": "tests/plan.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "2ee6255b8002daafe0a5ccf5e7a66a04ef3c83f0",
+      "source": "tests/test_review_product.py",
+      "target": "docs/missing.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "0dbb96f91aafc80907495849496ac992fcbd4d08",
+      "source": "tests/test_review_product.py",
+      "target": "reference/baseline.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "c9bacdaa22764af5f6a27fcbb6992544cbebc055",
+      "source": "tests/test_review_product.py",
+      "target": "reports/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "f01b2aa9a5448827504e32a2f3bdac4adc17dc6e",
+      "source": "tests/test_review_product.py",
+      "target": "reports/latest.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "56f1d3d2d1c584aa936262262ec5126840f7e4da",
+      "source": "tests/test_review_product.py",
+      "target": "reports/sidecar.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "65101e84ba828a22a34d0e41101bbd03b588608a",
+      "source": "tests/test_review_product.py",
+      "target": "tests/input.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "a418f54ba3886f5b6f5947ce41714ed8c4032c1f",
+      "source": "tests/test_review_product.py",
+      "target": "tests/latest.json"
+    },
+    {
+      "category": "broken_reference",
+      "id": "48fbd441e7804146c78918383d567a050bad8b24",
+      "source": "tests/test_review_product.py",
+      "target": "tests/notes.md"
+    },
+    {
+      "category": "broken_reference",
+      "id": "b1e9edfe660fcb14bf279f90dcd439bd64143c28",
+      "source": "tests/test_review_product.py",
+      "target": "tests/plan.md"
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "73f5ba7ab68e2c52226b83993291f1bede3b2af9",
+      "source": "corpora/best-runtime-box.toml",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "951beb855aaf34079aadd03a16f872b5163e6795",
+      "source": "docs/GC_MANUAL.zh-CN.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "3c0ef87431da365f3747d547acd289c2c2c5b38f",
+      "source": "docs/GC_MANUAL.zh-CN.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "65fbcc1623b964f787e3e8992a2b11e53e80e3f3",
+      "source": "docs/configuration.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "536b7741ac73b64075a02d3a7954521cf626148a",
+      "source": "docs/decisions/0003-phase-0.6-marker-context.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "0f0a41a069f0d70f6f745bfb26ba9d3c91875b1c",
+      "source": "docs/decisions/0003-phase-0.6-marker-context.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "28ef570b8047c1b02f7c5e012ffa8afe540bd7d6",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "72ee41357d01d9e88a90d81d9fb52f69abf1ae95",
+      "source": "docs/evaluations/best-runtime-box-phase-0.6.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "3169a8e3cd4310a04c2bfae81e9dce24bb95c691",
+      "source": "docs/evaluations/best-runtime-box-phase-0.7.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "fdb90c94a75adb652e3e04f91c743e4a1d49e701",
+      "source": "repogc.toml",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "e2d068a575f490bbfabd9c234ecc67cc066be948",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "80498f8b8d2f9ad9d96a9a0849e0205235175990",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "ba50d955dfb33cad00bcef6965ec491d2cfe2923",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "1448ca5ad970395ee0c76026ee2269a7d408833f",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "e1d82f7950a3d8c5176eddfde978ea8a480d719b",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "0a55a1f27ccd5be26a98ce1c7ea6b3853ca088fd",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "a82ac771e8a55ca192fbde53546502553da0a9bd",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "374df4157580f478557c4d57f377b94954c0c160",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "bb2f0312c06337d71ab7bcaf0da5254ac01d8c45",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "8e22efb35eeaa8d13d0f949374c905aeca076255",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "73933915073384ae70c601f0b092c1cb3015f052",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "968b78b3e346918bed84101acb5f061af546b31b",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "fdd9aea94adcb01f5fefa99dc9f173e23123d136",
+      "source": "tests/fixtures/golden-report/process_log.md",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "03576960e174af31fdad25f01534c3d66456276b",
+      "source": "tests/golden/minimal-report.json",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "e69ba5dd1eeba2fc4a4893e58c34f2a85ba537d3",
+      "source": "tests/test_annotations.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "45798eb529096c76a03b7e34857a999a1896e319",
+      "source": "tests/test_annotations.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "25989c9d994fe9e617305fcd1ac843d27861d490",
+      "source": "tests/test_annotations.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "d4dd6b5017431e5031f015db684d1e67217cf759",
+      "source": "tests/test_cli.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "071d1899af74085390ecccb66d77ebb11189f551",
+      "source": "tests/test_cli.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "b4ba79722303692dca2276b5ddff0fbbb5effc4c",
+      "source": "tests/test_evidence_graph.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "43234eaf5bdd55a0eb565cafc9ffae4306b9f41c",
+      "source": "tests/test_golden_report.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "dba3d44e2b3d5114a5bf285952e2127f3f32da06",
+      "source": "tests/test_liveness.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "b0331a4d9fcdfb91caaaf6500a46157fb1dfe958",
+      "source": "tests/test_liveness.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "99c11444af755a5db78bf6e5c3dd4d2215a574fd",
+      "source": "tests/test_liveness_declarations.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "4858e398baf19bc5c395ab8da758308ca3cc8eeb",
+      "source": "tests/test_liveness_declarations.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "312b55cd7a8abdda06f8f570a46894d405920ce2",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "1415a161785f38e905d491fc050de2a6e5550602",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "f1435382a26380837e2ab8e031992a11403976b2",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "af8f5df0b98df723b2229f45f53275873e7567ec",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "20ad2a421763f7b20d3738171aa0083350e38e36",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "2fadb020fbf4835248578afe6a98ad71fcc515a6",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "4619b27a17fa6371883d5e12a0ef684baf56723d",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "62ffc0b4d292906457c2c4f283247dce061a71a4",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "e6a0995633d89eb5a1adf1a3efe5931841f981a2",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "426248e4db469af33be332f15636ab5680dc6445",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "c72698e9b4bca0834162129e80e354de2a0c4b73",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "0adc6bcb4e91dde81ed5445fdba2b16bbe301b7d",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "e4c393f9a97cf226f1b3f92719ee2f55e9597dcf",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "765c4c3faf732e56539345b10e1a0ac77789014a",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "30cde610939c5ac77f4dc5b44aa3a60f41e29a4f",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "3c0d7632ea6b93f1a980633e4d7f343cf01a7f41",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "4674f343db549204a469b2b6ffe253393209fabc",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "a9c6b5c77706d542ade50afb8d44749bc9465217",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "bd0ad5f1dcfa5dd2c2012b2add66473c1a3f31c4",
+      "source": "tests/test_marker_context.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "534a542a9db480a80e6a5f3fd2340a51384cdfaa",
+      "source": "tests/test_project_contract.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "3ec9e8d42b8c05b844cb3826884236c067aae208",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "809537538a6d5073eafc4286c4b539f3e061606f",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "5438434d08c173944cb45bfa121de233cac730a5",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "09d62ac533adc53def58482e35bcfe46ea816c97",
+      "source": "tests/test_review_cli.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "9f668197f4e5e9d95ee9d9e0e09d726165165e41",
+      "source": "tests/test_review_cli.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "b9b000d9df37eac5087af164bb415fd71f05f3b2",
+      "source": "tests/test_review_cli.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "61bc7a72cbbc39d0569a29ecf4f84e3f62adc0f6",
+      "source": "tests/test_review_product.py",
+      "target": null
+    },
+    {
+      "category": "unimplemented_marker",
+      "id": "5f59b717128ccc25143d7dac399099b8634dd7a0",
+      "source": "tests/test_review_product.py",
+      "target": null
+    }
+  ],
+  "report_schema_version": "0.7",
+  "repository_commit": "cab5bad3b00466f26e54dc850e73b5079e31df1c",
+  "scanner_hash": "3ffbca887821321e662c1590cfdfd9e1f9d1f3cc77beb42fae38c4661c01cc8b"
+}

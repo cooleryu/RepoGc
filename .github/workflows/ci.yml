@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install RepoGC
+        run: python -m pip install .
+      - name: Run tests
+        run: python -m unittest discover -s tests -p 'test*.py' -v
+      - name: Run sentinels
+        run: repogc doctor . --config repogc.toml
+      - name: Run first-review walkthrough
+        run: repogc review examples/first-review
+      - name: Run development evaluation
+        run: python -m evals.run --output "${{ runner.temp }}/repogc-development-evaluation"
+      - name: Dogfood without writes
+        run: repogc scan . --config repogc.toml --no-write
+
+  package:
+    name: Build package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install build frontend
+        run: python -m pip install build
+      - name: Build wheel and source distribution
+        run: python -m build

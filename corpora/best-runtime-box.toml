@@ -1,0 +1,30 @@
+[scan]
+include_suffixes = [".md", ".txt", ".js", ".mjs", ".cjs", ".json", ".jsonl", ".yaml", ".yml", ".sh"]
+orphan_suffixes = [".md"]
+duplicate_suffixes = [".md", ".txt"]
+exclude_dirs = [".git", ".venv", "__pycache__", "build", "dist", "node_modules", "vendor", ".tmp", ".brb", ".harness/runs"]
+exclude_globs = [".DS_Store", "src/.DS_Store", ".env.local", "package-lock.json", "brb-sandbox-*.txt"]
+root_files = ["README.md"]
+max_file_bytes = 1500000
+duplicate_threshold = 0.96
+duplicate_min_chars = 120
+use_git = true
+
+[markers]
+tokens = ["TODO", "FIXME", "XXX", "NOT_IMPLEMENTED", "未实现", "待实现"]
+
+[graph]
+root_globs = ["README.md", "package.json", ".harness/README.md", ".harness/research.md", ".harness/plan.md", ".harness/test-matrix.md", ".harness/observations.md", ".harness/task-board.json", ".harness/run-state.json", "skills/*/SKILL.md"]
+instruction_globs = ["AGENTS.md", "**/AGENTS.md", "CLAUDE.md", "**/CLAUDE.md", ".harness/README.md", "skills/*/SKILL.md"]
+contract_globs = [".harness/README.md", "skills/*/SKILL.md"]
+test_globs = ["test/**", "tests/**", "**/fixtures/**"]
+generated_globs = [".harness/runs/**", ".brb/**", "docs/gc_reports/**", "reference/gc_reports/**"]
+ci_globs = [".github/workflows/**", ".gitlab-ci.yml"]
+config_globs = ["package.json"]
+config_reference_keys = ["main", "module", "browser", "types", "bin", "exports", "scripts"]
+state_reference_keys = ["artifacts"]
+
+[reports]
+markdown = "docs/gc_reports/latest.md"
+json = "docs/gc_reports/latest.json"
+baseline = "reference/gc_reports/baseline.json"

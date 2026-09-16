@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Generated local reports. Curated phase reports may be force-added deliberately.
+docs/gc_reports/latest.json
+docs/gc_reports/latest.md
+docs/gc_reports/evaluations/

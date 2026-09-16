@@ -1,0 +1,31 @@
+include README.md
+include docs/first-review.md
+recursive-include examples *.md *.toml
+include AGENTS.md
+include LICENSE
+include CONTRIBUTING.md
+include SECURITY.md
+include CHANGELOG.md
+include repogc.toml
+include .github/workflows/ci.yml
+include docs/NORTH_STAR.md
+include docs/CONSTITUTION.md
+include docs/ENGINEERING_AND_EVALUATION.md
+include docs/GC_MANUAL.zh-CN.md
+include docs/HISTORICAL_REGRESSIONS.zh-CN.md
+include docs/PHASE0_STATUS.zh-CN.md
+include docs/audit-index.md
+include docs/architecture.md
+include docs/annotations.md
+include docs/configuration.md
+include docs/findings.md
+include docs/privacy.md
+include docs/report-schema.md
+include docs/evidence-bundle.md
+include docs/gc_reports/phase0-bootstrap.md
+recursive-include docs/decisions *.md
+recursive-include docs/evaluations *.md
+recursive-include corpora *.toml
+recursive-include tests *.py *.md *.json
+recursive-include evals *.py *.json *.md *.txt *.toml
+recursive-include .agents/skills *.md *.yaml

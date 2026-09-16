@@ -1,0 +1,47 @@
+{
+  "schema_version": "1",
+  "status": "not_run",
+  "purpose": "Record real paired maintenance tasks; never fill outcomes with simulated users.",
+  "protocol": {
+    "frozen_before_run_at": null,
+    "task_selection_rule": null,
+    "arm_a": "Current review plus the user's usual AI investigation",
+    "arm_b": "Versioned evidence package plus structured AI investigation; not implemented yet",
+    "controlled_variables": ["source snapshot", "model and settings", "allowed evidence", "time budget"],
+    "ordering_and_learning_control": null,
+    "important_omission_definition": null,
+    "safety_stop_rule": "Stop and inspect any unsupported cleanup verdict, authorization bypass, or hidden important risk.",
+    "benefit_threshold_before_observing_results": null,
+    "sample_size_and_scope": null,
+    "exclusions_defined_before_run": []
+  },
+  "trials": [],
+  "trial_record_fields": {
+    "id": null,
+    "participant_pseudonym": null,
+    "case_and_snapshot_hash": null,
+    "arm_and_order": null,
+    "model_and_settings": null,
+    "start_time": null,
+    "end_time": null,
+    "active_human_seconds": null,
+    "ai_elapsed_seconds": null,
+    "model_calls_retries_tokens_cost_or_unknown": null,
+    "independent_response_items": null,
+    "clarification_items": null,
+    "user_corrections_with_evidence": [],
+    "false_concerns_with_adjudication": [],
+    "important_omissions_with_adjudication": [],
+    "deferred_items_and_reasons": [],
+    "traceback_attempts_and_successes": null,
+    "maintainer_comments": null,
+    "protocol_deviations": [],
+    "scope_of_conclusion": null
+  },
+  "limits": [
+    "A template is not an executed trial or an enforced validator.",
+    "Freeze concrete thresholds and sample scope before collecting results.",
+    "Small pilot observations do not establish causal or general benefit.",
+    "Public copies must omit private source material and personal information."
+  ]
+}

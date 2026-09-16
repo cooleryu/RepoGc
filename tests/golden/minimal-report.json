@@ -1,0 +1,200 @@
+{
+  "artifact_liveness": [
+    {
+      "dimension_statuses": {
+        "build_test_ci_or_config_consumer": "NOT_OBSERVED",
+        "business_meaning": "NOT_INFERRED",
+        "contract_or_instruction_consumer": "NOT_OBSERVED",
+        "dynamic_consumers": "UNKNOWN",
+        "external_system_consumers": "UNKNOWN",
+        "git_last_touch": "UNKNOWN",
+        "human_declared_root": "NOT_OBSERVED",
+        "human_declared_retention": "NOT_OBSERVED",
+        "root_reachability": "OBSERVED",
+        "runtime_access": "UNKNOWN",
+        "static_inbound_references": "OBSERVED"
+      },
+      "exists": true,
+      "incoming_edge_counts": {
+        "contextual": 0,
+        "contract_sensitive": 0,
+        "strong": 1
+      },
+      "path": "SKILL.md"
+    },
+    {
+      "dimension_statuses": {
+        "build_test_ci_or_config_consumer": "NOT_OBSERVED",
+        "business_meaning": "NOT_INFERRED",
+        "contract_or_instruction_consumer": "OBSERVED",
+        "dynamic_consumers": "UNKNOWN",
+        "external_system_consumers": "UNKNOWN",
+        "git_last_touch": "UNKNOWN",
+        "human_declared_root": "NOT_OBSERVED",
+        "human_declared_retention": "NOT_OBSERVED",
+        "root_reachability": "NOT_APPLICABLE",
+        "runtime_access": "UNKNOWN",
+        "static_inbound_references": "OBSERVED"
+      },
+      "exists": false,
+      "incoming_edge_counts": {
+        "contextual": 0,
+        "contract_sensitive": 1,
+        "strong": 1
+      },
+      "path": "missing.md"
+    },
+    {
+      "dimension_statuses": {
+        "build_test_ci_or_config_consumer": "NOT_OBSERVED",
+        "business_meaning": "NOT_INFERRED",
+        "contract_or_instruction_consumer": "OBSERVED",
+        "dynamic_consumers": "DECLARED",
+        "external_system_consumers": "UNKNOWN",
+        "git_last_touch": "UNKNOWN",
+        "human_declared_root": "NOT_OBSERVED",
+        "human_declared_retention": "NOT_OBSERVED",
+        "root_reachability": "OBSERVED",
+        "runtime_access": "UNKNOWN",
+        "static_inbound_references": "OBSERVED"
+      },
+      "exists": true,
+      "incoming_edge_counts": {
+        "contextual": 0,
+        "contract_sensitive": 1,
+        "strong": 1
+      },
+      "path": "process_log.md"
+    }
+  ],
+  "artifacts": [
+    {
+      "evidence_path": [
+        "README.md"
+      ],
+      "exists": true,
+      "incoming_edge_kinds": [],
+      "path": "README.md",
+      "reachable": true,
+      "reachable_from": "README.md",
+      "role": "document",
+      "root": true
+    },
+    {
+      "evidence_path": [
+        "README.md",
+        "SKILL.md"
+      ],
+      "exists": true,
+      "incoming_edge_kinds": [
+        "markdown_link"
+      ],
+      "path": "SKILL.md",
+      "reachable": true,
+      "reachable_from": "README.md",
+      "role": "skill",
+      "root": false
+    },
+    {
+      "evidence_path": [],
+      "exists": false,
+      "incoming_edge_kinds": [
+        "declared_contract_reference"
+      ],
+      "path": "missing.md",
+      "reachable": false,
+      "reachable_from": null,
+      "role": "document",
+      "root": false
+    },
+    {
+      "evidence_path": [
+        "README.md",
+        "SKILL.md",
+        "process_log.md"
+      ],
+      "exists": true,
+      "incoming_edge_kinds": [
+        "declared_contract_reference"
+      ],
+      "path": "process_log.md",
+      "reachable": true,
+      "reachable_from": "README.md",
+      "role": "document",
+      "root": false
+    }
+  ],
+  "edges": [
+    {
+      "contract_sensitive": false,
+      "id": "9f31bfa0f112e29839f3f6737421bd529eb67920",
+      "kind": "markdown_link",
+      "source": "README.md",
+      "strength": "strong",
+      "syntax": "markdown_link",
+      "target": "SKILL.md",
+      "traversable": true
+    },
+    {
+      "contract_sensitive": true,
+      "id": "0d642a6dc5274482332a5b059f9d7a6ac320ff5f",
+      "kind": "declared_contract_reference",
+      "source": "SKILL.md",
+      "strength": "strong",
+      "syntax": "path_token",
+      "target": "missing.md",
+      "traversable": true
+    },
+    {
+      "contract_sensitive": true,
+      "id": "5571258d98a382a3c09a78874b1e6a950dc023bc",
+      "kind": "declared_contract_reference",
+      "source": "SKILL.md",
+      "strength": "strong",
+      "syntax": "path_token",
+      "target": "process_log.md",
+      "traversable": true
+    }
+  ],
+  "findings": [
+    {
+      "category": "broken_reference",
+      "contract_sensitive": true,
+      "evidence": "unresolved path: missing.md",
+      "evidence_kind": "declared_contract_reference",
+      "evidence_strength": "strong",
+      "id": "f78b549768d2b555aa7a7a515a12a957fafbfe23",
+      "review_subjects": [
+        "SKILL.md",
+        "missing.md"
+      ],
+      "rule": "path_reference_target_missing",
+      "source": "SKILL.md",
+      "target": "missing.md"
+    },
+    {
+      "category": "unimplemented_marker",
+      "contract_sensitive": false,
+      "evidence": "TODO capture the runtime story",
+      "evidence_kind": "documentation_marker",
+      "evidence_strength": "contextual",
+      "id": "bb073107770f05d2105d2abff59cba023f3702d4",
+      "review_subjects": [
+        "process_log.md"
+      ],
+      "rule": "configured_unimplemented_marker",
+      "source": "process_log.md",
+      "target": null
+    }
+  ],
+  "reliability": "RELIABLE",
+  "report_schema_version": "0.7",
+  "scan_integrity": "PASS",
+  "summary": {
+    "broken_reference": 1,
+    "duplicate_candidate": 0,
+    "orphan_candidate": 0,
+    "unimplemented_marker": 1,
+    "unreachable_candidate": 0
+  }
+}

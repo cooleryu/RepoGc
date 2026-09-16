@@ -1,0 +1,1212 @@
+{
+  "findings": [
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: .gitlab-ci.yml",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "c03c4a8817ea4db9729995564820c163f20b5457",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 14,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/.gitlab-ci.yml"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: SKILL.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "a725d5d13bb377047ee850642b7dd3864db5f005",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 55,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/SKILL.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: core_principles_memo.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "95f230f36b98a11d18051f25186b7f5db0d18e81",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 21,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/core_principles_memo.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: example.jsonl",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "67fb320528e8c62b1847ef9b08a926edb897e711",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 37,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/example.jsonl"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: process_log.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "f3a19badf3d308cebfe7296acb580e9124cf98b3",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 54,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/process_log.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: provenance_seal_mechanism.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "042cfa3d64fb408a7e50b2f028928d5ff4fa0839",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 21,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "docs/provenance_seal_mechanism.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: tools/guarded_push.py",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "33473aad88d02a4e1db03aac751d05b40a8d8345",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 11,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "docs/HISTORICAL_REGRESSIONS.zh-CN.md",
+      "target": "tools/guarded_push.py"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: AGENTS.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "87e3a01a06e564ec367bb5695bfa2ac8138ff5f0",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 6,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "repogc.toml",
+      "target": "AGENTS.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: CLAUDE.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "bec9a9f4e406ad1324402a2a7e9cee38948b0561",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 6,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "repogc.toml",
+      "target": "CLAUDE.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: CONTRIBUTING.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "7006a2f2f65c916f44c3e63cd8c25994c7851267",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 6,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "repogc.toml",
+      "target": "CONTRIBUTING.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: SECURITY.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "046fc589ac8860351b6e29ea0d5661a6f2394ea9",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 6,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "repogc.toml",
+      "target": "SECURITY.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: AGENTS.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "9ae1ce3541ce60e7c563492b163e51960a53fe54",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 39,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/AGENTS.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: CLAUDE.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "29ca7e34f707f608d42715acea335d6396cb1435",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 40,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/CLAUDE.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: CONTRIBUTING.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "c0ec91147391b54a0f6e2bf797645fc69aa2666c",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 41,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/CONTRIBUTING.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: SECURITY.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "a45cfdfebee5b6083d97d5f1ab100f4de1aa6a0a",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 42,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/config.py",
+      "target": "src/repogc/SECURITY.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: SKILL.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "ca34daaedbcbba0a99c03e25cea3e68caf59aecb",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 40,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/SKILL.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: core_principles_memo.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "ce3e6e6f0b609e2d36f10367b2cdebe505e9c459",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 27,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/core_principles_memo.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: example.jsonl",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "966bf670de830592213ba523079e62895999bfc3",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 44,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/example.jsonl"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: process_log.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "69d4faf2eca11c36f214c7683c76ecfaa1d2fd01",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 61,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/process_log.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: provenance_seal_mechanism.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "3acfc0f87de7a6521d5de10dc6a725b4c83037ec",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 27,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/self_check.py",
+      "target": "src/repogc/provenance_seal_mechanism.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: tools/guarded_push.py",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "d3439dad18131099ceb08f958062f50fbfab6b51",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 19,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "src/repogc/self_check.py",
+      "target": "tools/guarded_push.py"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: reference/baseline.json",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "0bcc0dc913997864cab482ccf5412dd9a3c77666",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 35,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_cli.py",
+      "target": "reference/baseline.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: reports/latest.json",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "c4443212ac8787de766adad7f36d8caee151b9ce",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 34,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_cli.py",
+      "target": "reports/latest.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: reports/latest.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "67f67f7b336b4b2e26e9fa9c2c9a91c4acc25c66",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 33,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_cli.py",
+      "target": "reports/latest.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: baseline.json",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "cdd9e53416cf46db27f69a9adfee569e08df65af",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 45,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_cli.py",
+      "target": "tests/baseline.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: latest.json",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "ba8f2df78cf868ee82941d57ec29679b1ef45d97",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 43,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_cli.py",
+      "target": "tests/latest.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: latest.md",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "dc30757192f17793696ea2ae61ea859f5debbb94",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 42,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_cli.py",
+      "target": "tests/latest.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: docs/live.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "c433d5300acb5026f7cff5a3cf94da90c9153808",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 129,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "docs/live.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: ../outside.json",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "bfbe0065bb95813b9bee63723a694298f7ce251a",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 184,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "outside.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: reports/generated.json",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "b9030ff1f7aea2d74ef220d4239f4b6d647309f4",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 244,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "reports/generated.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: reports/phase0-bootstrap.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "e2f0683efdf247e6f2da295f8c0a4aa85f2cc7e4",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 269,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "reports/phase0-bootstrap.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: SKILL.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "1033c9638870f782da330e116c8c479a6d3a0a69",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 66,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/SKILL.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: core_principles_memo.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "cb76dcf82753f269e869e514d9978144b5a1f484",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 49,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/core_principles_memo.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: example.jsonl",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "45b39896ac828ef31653ff5c6849b155fac9d642",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 88,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/example.jsonl"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: generated.json",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "944ea3e7e32c1b10d177c66e9644cbb0688bc88d",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 248,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/generated.json"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: live.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "fe29240eeb1f762b1363a8db4bb7f2f024de5e11",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 131,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/live.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: notes.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "de3e09a47b8ce9a899452ca9d6f7f0bd799965e2",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 153,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/notes.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: phase0-bootstrap.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "f5f250577b5da6ed3a56c5ebb20bd1d99563579a",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 273,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/phase0-bootstrap.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: private-name.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "2e58c84cac5c092141be47a606e41b1944c4eee5",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 234,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/private-name.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: process_log.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "c57a19c469adcdce566c2a473ea98f83812cf261",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 110,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/process_log.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: provenance_seal_mechanism.md",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "262ed96895109bb1bce75d67e8ed00ce94e72192",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 49,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tests/provenance_seal_mechanism.md"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "broken_reference",
+      "evidence": "unresolved path: tools/guarded_push.py",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Confirm the intended resolution context before changing the reference.",
+      "id": "113811a46d5fbca1872686516e86aba39e3849e3",
+      "known_limitations": "The path may be generated, external, intentionally illustrative, or outside the configured scan surface.",
+      "line": 43,
+      "referenced_by": [],
+      "rule": "path_reference_target_missing",
+      "source": "tests/test_regressions.py",
+      "target": "tools/guarded_push.py"
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "3. `unimplemented_marker`:配置词表命中未实现标记。",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "951beb855aaf34079aadd03a16f872b5163e6795",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 82,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "docs/GC_MANUAL.zh-CN.md",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "Markdown 在当前扫描面没有入站引用、哪些承诺仍有未实现标记、哪些文档",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "3c0ef87431da365f3747d547acd289c2c2c5b38f",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 14,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "docs/GC_MANUAL.zh-CN.md",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "## 尚未实现或验证",
+      "git_last_touch": null,
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "9eb53269461f91473836818a82da01b06c7ad50f",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 50,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "docs/PHASE0_STATUS.zh-CN.md",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "- 四类机械扫描:unresolved reference、orphan candidate、未实现标记、重复候选;",
+      "git_last_touch": null,
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "0911355fdfb9136781290bc9a36e116bab07039f",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 38,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "docs/PHASE0_STATUS.zh-CN.md",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "- 未实现词表中含中英文项目词汇;",
+      "git_last_touch": null,
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "852fddd3f1ad0065cbe979b1b852f4c37efc9ba9",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 93,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "docs/PHASE0_STATUS.zh-CN.md",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "tokens = [\"TODO\", \"FIXME\", \"XXX\", \"NOT_IMPLEMENTED\", \"未实现\", \"待实现\"]",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "fdb90c94a75adb652e3e04f91c743e4a1d49e701",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 13,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "repogc.toml",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"FIXME\",",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "e2d068a575f490bbfabd9c234ecc67cc066be948",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 50,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"NOT_IMPLEMENTED\",",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "80498f8b8d2f9ad9d96a9a0849e0205235175990",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 52,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"TODO\",",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "ba50d955dfb33cad00bcef6965ec491d2cfe2923",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 49,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"XXX\",",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "1448ca5ad970395ee0c76026ee2269a7d408833f",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 51,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"待实现\",",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "e1d82f7950a3d8c5176eddfde978ea8a480d719b",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 54,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"未实现\",",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "0a55a1f27ccd5be26a98ce1c7ea6b3853ca088fd",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 53,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/config.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"ai_annotation_status\": \"not_implemented\",",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "843a9ce5ac636fe45f02dd53569083f78f51d86c",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 42,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/models.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"ai_annotation_status\": \"not_implemented\",",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "64643706e7bd3113fe2fb31f9ce094ca8f742dcf",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 22,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/reporting.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "after = stable_id(\"SKILL.md\", \"TODO preserve this contract\")",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "374df4157580f478557c4d57f377b94954c0c160",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 41,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "before = stable_id(\"SKILL.md\", \"TODO preserve this contract\")",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "bb2f0312c06337d71ab7bcaf0da5254ac01d8c45",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 40,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "src/repogc/self_check.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "(root / \"README.md\").write_text(\"TODO explain behavior\\n\", encoding=\"utf-8\")",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "d4dd6b5017431e5031f015db684d1e67217cf759",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 15,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_cli.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "tokens = [\"TODO\"]",
+      "git_last_touch": {
+        "commit": "15686a1e824aa75b7119915bee9aa1fbea0dade9",
+        "date": "2026-09-01T23:06:43+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "071d1899af74085390ecccb66d77ebb11189f551",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 30,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_cli.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"Inserted context\\n# Contract\\nTODO preserve this contract\\n\",",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "78702024a0cda0b1d1227b1248b2ea45d8b8d0ab",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 76,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "\"marker_tokens\": (\"TODO\",),",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "3ec9e8d42b8c05b844cb3826884236c067aae208",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 32,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "(root / \"README.md\").write_text(\"TODO test\\n\", encoding=\"utf-8\")",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "809537538a6d5073eafc4286c4b539f3e061606f",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 189,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "(root / \"docs\" / \"live.md\").write_text(\"TODO document behavior\\n\", encoding=\"utf-8\")",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "5438434d08c173944cb45bfa121de233cac730a5",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 131,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_regressions.py",
+      "target": null
+    },
+    {
+      "ai_annotation_status": "not_implemented",
+      "category": "unimplemented_marker",
+      "evidence": "skill.write_text(\"# Contract\\nTODO preserve this contract\\n\", encoding=\"utf-8\")",
+      "git_last_touch": {
+        "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+        "date": "2026-09-02T15:40:12+08:00"
+      },
+      "human_review": "Determine whether this marker is an active promise, example, or historical evidence.",
+      "id": "02134b2d6c8c124e4d6f033f72326c53aff0cd92",
+      "known_limitations": "Markers in examples, quotations, and historical records may be intentional.",
+      "line": 67,
+      "referenced_by": [],
+      "rule": "configured_unimplemented_marker",
+      "source": "tests/test_regressions.py",
+      "target": null
+    }
+  ],
+  "metadata": {
+    "ai_annotation_status": "not_implemented",
+    "config_hash": "65257d12a829245519469e4ec884c6a4f4f101811ed9672f56a0bae91489016e",
+    "generated_at": "2026-09-02T07:41:02.702771+00:00",
+    "reliability": "RELIABLE",
+    "reliability_reasons": [],
+    "repogc_version": "0.0.0",
+    "report_schema_version": "0.1",
+    "repository": {
+      "branch": "main",
+      "commit": "67061a295a6f33f8f43e323c829640fd29ca651a",
+      "dirty": true
+    },
+    "scanned_files": 19,
+    "scanner_hash": "ca3270dc1784a6df009abcb3fb3a183ad4175c6d85103373233177d93869639a",
+    "self_check": {
+      "checks": [
+        "C1 token-scoped negation",
+        "C2 mutual document references",
+        "C3 line-independent stable ID",
+        "C4 JSONL suffix preservation",
+        "C5 basis-change disclosure",
+        "C6 contract consumer reference"
+      ],
+      "failures": [],
+      "ok": true
+    },
+    "skipped_files": []
+  },
+  "summary": {
+    "broken_reference": 42,
+    "duplicate_candidate": 0,
+    "orphan_candidate": 0,
+    "unimplemented_marker": 23
+  },
+  "trend": {
+    "baseline_present": true,
+    "basis_change_reasons": [],
+    "basis_changed": false,
+    "new": 0,
+    "new_ids": [],
+    "persistent": 65,
+    "persistent_ids": [
+      "02134b2d6c8c124e4d6f033f72326c53aff0cd92",
+      "042cfa3d64fb408a7e50b2f028928d5ff4fa0839",
+      "046fc589ac8860351b6e29ea0d5661a6f2394ea9",
+      "071d1899af74085390ecccb66d77ebb11189f551",
+      "0911355fdfb9136781290bc9a36e116bab07039f",
+      "0a55a1f27ccd5be26a98ce1c7ea6b3853ca088fd",
+      "0bcc0dc913997864cab482ccf5412dd9a3c77666",
+      "1033c9638870f782da330e116c8c479a6d3a0a69",
+      "113811a46d5fbca1872686516e86aba39e3849e3",
+      "1448ca5ad970395ee0c76026ee2269a7d408833f",
+      "262ed96895109bb1bce75d67e8ed00ce94e72192",
+      "29ca7e34f707f608d42715acea335d6396cb1435",
+      "2e58c84cac5c092141be47a606e41b1944c4eee5",
+      "33473aad88d02a4e1db03aac751d05b40a8d8345",
+      "374df4157580f478557c4d57f377b94954c0c160",
+      "3acfc0f87de7a6521d5de10dc6a725b4c83037ec",
+      "3c0ef87431da365f3747d547acd289c2c2c5b38f",
+      "3ec9e8d42b8c05b844cb3826884236c067aae208",
+      "45b39896ac828ef31653ff5c6849b155fac9d642",
+      "5438434d08c173944cb45bfa121de233cac730a5",
+      "64643706e7bd3113fe2fb31f9ce094ca8f742dcf",
+      "67f67f7b336b4b2e26e9fa9c2c9a91c4acc25c66",
+      "67fb320528e8c62b1847ef9b08a926edb897e711",
+      "69d4faf2eca11c36f214c7683c76ecfaa1d2fd01",
+      "7006a2f2f65c916f44c3e63cd8c25994c7851267",
+      "78702024a0cda0b1d1227b1248b2ea45d8b8d0ab",
+      "80498f8b8d2f9ad9d96a9a0849e0205235175990",
+      "809537538a6d5073eafc4286c4b539f3e061606f",
+      "843a9ce5ac636fe45f02dd53569083f78f51d86c",
+      "852fddd3f1ad0065cbe979b1b852f4c37efc9ba9",
+      "87e3a01a06e564ec367bb5695bfa2ac8138ff5f0",
+      "944ea3e7e32c1b10d177c66e9644cbb0688bc88d",
+      "951beb855aaf34079aadd03a16f872b5163e6795",
+      "95f230f36b98a11d18051f25186b7f5db0d18e81",
+      "966bf670de830592213ba523079e62895999bfc3",
+      "9ae1ce3541ce60e7c563492b163e51960a53fe54",
+      "9eb53269461f91473836818a82da01b06c7ad50f",
+      "a45cfdfebee5b6083d97d5f1ab100f4de1aa6a0a",
+      "a725d5d13bb377047ee850642b7dd3864db5f005",
+      "b9030ff1f7aea2d74ef220d4239f4b6d647309f4",
+      "ba50d955dfb33cad00bcef6965ec491d2cfe2923",
+      "ba8f2df78cf868ee82941d57ec29679b1ef45d97",
+      "bb2f0312c06337d71ab7bcaf0da5254ac01d8c45",
+      "bec9a9f4e406ad1324402a2a7e9cee38948b0561",
+      "bfbe0065bb95813b9bee63723a694298f7ce251a",
+      "c03c4a8817ea4db9729995564820c163f20b5457",
+      "c0ec91147391b54a0f6e2bf797645fc69aa2666c",
+      "c433d5300acb5026f7cff5a3cf94da90c9153808",
+      "c4443212ac8787de766adad7f36d8caee151b9ce",
+      "c57a19c469adcdce566c2a473ea98f83812cf261",
+      "ca34daaedbcbba0a99c03e25cea3e68caf59aecb",
+      "cb76dcf82753f269e869e514d9978144b5a1f484",
+      "cdd9e53416cf46db27f69a9adfee569e08df65af",
+      "ce3e6e6f0b609e2d36f10367b2cdebe505e9c459",
+      "d3439dad18131099ceb08f958062f50fbfab6b51",
+      "d4dd6b5017431e5031f015db684d1e67217cf759",
+      "dc30757192f17793696ea2ae61ea859f5debbb94",
+      "de3e09a47b8ce9a899452ca9d6f7f0bd799965e2",
+      "e1d82f7950a3d8c5176eddfde978ea8a480d719b",
+      "e2d068a575f490bbfabd9c234ecc67cc066be948",
+      "e2f0683efdf247e6f2da295f8c0a4aa85f2cc7e4",
+      "f3a19badf3d308cebfe7296acb580e9124cf98b3",
+      "f5f250577b5da6ed3a56c5ebb20bd1d99563579a",
+      "fdb90c94a75adb652e3e04f91c743e4a1d49e701",
+      "fe29240eeb1f762b1363a8db4bb7f2f024de5e11"
+    ],
+    "resolved": 0,
+    "resolved_ids": []
+  }
+}
