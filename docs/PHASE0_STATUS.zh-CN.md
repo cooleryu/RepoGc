@@ -83,7 +83,8 @@ Git 读取已增加辅助程序防护；遇到内容过滤器时不读取工作�
 1. 本地机械[证据包](evidence-bundle.md)已落地；完整决定包、AI 返回重验、
    独立人类事项与可追溯延后协议仍需完成；
 2. 真实维护任务中对调查负担、纠正和重要遗漏的配对评估；
-3. 公开远端已建立为 cooleryu/RepoGc；首次推送后核验 Linux/macOS CI 结果；
+3. 公开实验版已推送至 cooleryu/RepoGc；首次提交的 Linux/macOS CI 与打包均通过，
+   见[发布核验记录](evaluations/public-preview-preflight.md)；后续仍需持续验证；
 4. 增加不同生态的真实仓库评估，初期优先可调查清楚的中小型仓库；
 5. 明确发布与版本策略。
 

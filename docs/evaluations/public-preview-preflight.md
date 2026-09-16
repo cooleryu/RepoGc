@@ -69,3 +69,22 @@ Remote CI and a public clone are checked after pushing; local tests alone do
 not establish remote success.
 
 See [the public-preview decision](../decisions/0014-public-preview.md).
+
+## Public verification
+
+The initial public commit is `8621399ac9a69be67a82190c5612cfe4205dc2b3`.
+GitHub confirmed it has no parents and uses the GitHub noreply identity for
+both author and committer. The old local history was not uploaded.
+
+[Initial public CI](https://github.com/cooleryu/RepoGc/actions/runs/35074870942)
+completed successfully: Linux and macOS on Python 3.11 and 3.12, plus package
+build (five jobs). GitHub recognizes the Apache-2.0 license.
+
+A fresh public HTTPS clone installed successfully into a new virtual environment
+using the README procedure. All 99 tests passed; the installed walkthrough
+and full evidence-bundle verification passed; tracked files remained unchanged.
+Gitleaks also scanned that public clone's single initial commit with no leaks
+found. These results apply to the named commit, not future revisions.
+
+The project remains an experimental source preview at package version 0.0.0.
+No PyPI publication or stable release is claimed.
