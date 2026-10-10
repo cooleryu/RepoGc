@@ -2,7 +2,7 @@
 include_suffixes = [".md", ".txt", ".py", ".js", ".mjs", ".cjs", ".ts", ".tsx", ".jsx", ".toml", ".json", ".jsonl", ".yaml", ".yml", ".sh"]
 orphan_suffixes = [".md"]
 duplicate_suffixes = [".md", ".txt"]
-exclude_dirs = [".git", ".venv", "__pycache__", "build", "dist", "node_modules", "vendor", ".tmp", ".brb", "docs/gc_reports", "reference/gc_reports"]
+exclude_dirs = [".git", ".venv", "__pycache__", "build", "dist", "node_modules", "vendor", ".tmp", ".brb", "docs/gc_reports", "reference/gc_reports", "examples/first-review"]
 exclude_globs = ["**/*.egg-info/**"]
 root_files = ["README.md", "AGENTS.md", "CLAUDE.md", "CONTRIBUTING.md", "SECURITY.md"]
 max_file_bytes = 1000000

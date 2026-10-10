@@ -9,9 +9,14 @@ From the installed source checkout, run:
 repogc review examples/first-review
 ```
 
-The CLI reports a missing referenced path and documents without an observed
-entry. It does not know which documents are useful. To see all mechanical
-observations instead of the selected cards:
+The output has two parts:
+
+- **Problems**: each one is certain. Here, a link points to a missing file and
+  a template placeholder was never replaced.
+- **Worth a look**: things only you can judge, such as a document nothing links
+  to. RepoGC does not know which documents are useful.
+
+To see all mechanical observations instead of the selected cards:
 
 ```sh
 repogc scan examples/first-review --json-stdout
@@ -23,6 +28,8 @@ repogc scan examples/first-review --json-stdout
    missing. Read `docs/getting-started.md`: it identifies itself as the moved
    setup guide. The reader-facing link is broken; correcting that link is a
    concrete candidate change. RepoGC has not made that change.
+   The README also still says `[INSERT CONTACT METHOD]`: template text that
+   needs a real contact.
 2. Read `docs/offline-export.md` and `docs/roadmap.md`. The design has no observed
    incoming link, but the roadmap explicitly describes staged export work and
    retention. No incoming link is not a reason to delete this document.

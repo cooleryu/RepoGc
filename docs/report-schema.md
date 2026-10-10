@@ -1,4 +1,4 @@
-# Report Schema 0.7
+# Report Schema 0.8
 
 The JSON report is the machine-readable evidence source. Markdown is a human
 view of the same scan and does not replace the JSON contract.
@@ -33,6 +33,13 @@ non-inferred surfaces. A reliable execution is not a claim of semantic
 completeness.
 
 ## Schema migration
+
+Schema 0.8 narrows `broken_reference` to rendered Markdown links checked
+against the repository (see [decision 0016](decisions/0016-narrow-first-release.md))
+and adds the `placeholder_text` category. Plain path-like text, such as a
+backticked file name or a code attribute like `result.markdown`, no longer
+produces a broken reference; it remains graph evidence. Comparing with a 0.7
+baseline sets `basis_changed=true`. Saved 0.7 bundles still verify.
 
 Schema 0.7 recognizes repository-scoped Codex Skills matching
 `.agents/skills/**/SKILL.md` as explicit host-consumed Roots. This can remove

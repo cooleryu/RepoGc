@@ -29,11 +29,11 @@ Python 包安装不会将 skill 全局安装。也可以按[首次使用示例](
 ## 当前完成
 
 - 正式名称 RepoGC；用户批准 Apache-2.0，许可证随源码和安装包分发；
-- 确定性扫描：失效引用、孤立候选、未完成或过期状态、相似文档、Root 不可达；
+- 确定性扫描：Markdown 断链与未替换的模板占位符（确定事实，全部列出，见[决策 0016](decisions/0016-narrow-first-release.md)）；孤立候选、未完成或过期状态、相似文档、Root 不可达（仅供人判断）；
 - 最多五张、按问题类型去重的 review 页面；
 - `Why / Context / Check` 三行人审结构；
 - Typed Evidence Graph、活性证据、Git 背景、稳定 Finding ID 和正式基线；
-- `RELIABLE / PARTIAL / UNRELIABLE` 运行可靠性边界和 15 个安全哨兵；
+- `RELIABLE / PARTIAL / UNRELIABLE` 运行可靠性边界和 17 个安全哨兵；
 - Codex 只读取被选中的证据，上下文经独立 sidecar 校验后再显示；
 - 本地测试、打包、自扫描和 Best Runtime Box 只读实测。
 - [工程与评估路线](ENGINEERING_AND_EVALUATION.md)：可运行开发集、完整运行档案、

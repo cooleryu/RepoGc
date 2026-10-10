@@ -43,7 +43,7 @@ DIMENSIONS = (
     "attention_and_omissions", "authority_boundary",
 )
 RATINGS = {"adequate", "concern", "not_assessed"}
-CATEGORIES = {"broken_reference", "orphan_candidate", "unreachable_candidate",
+CATEGORIES = {"broken_reference", "placeholder_text", "orphan_candidate", "unreachable_candidate",
               "unimplemented_marker", "duplicate_candidate"}
 
 
@@ -132,7 +132,7 @@ def validate_suite(suite: Any) -> None:
             elif kind == "artifact_reachable":
                 if spec.get("path") not in files or type(spec.get("value")) is not bool:
                     raise ValueError("Reachability requires an authored path and boolean")
-            elif kind == "review_unknowns":
+            elif kind in {"review_unknowns", "review_problem_listed"}:
                 if spec.get("subject") not in files:
                     raise ValueError("Review subject must be an authored file")
             elif kind == "review_max_cards":
@@ -164,6 +164,8 @@ def check_expectation(spec: dict, report: dict, review: dict) -> bool:
     if kind == "review_unknowns":
         return any(card["subject"] == spec["subject"] and bool(card["unknowns"])
                    for card in review["cards"])
+    if kind == "review_problem_listed":
+        return any(item["source"] == spec["subject"] for item in review.get("problems", []))
     if kind == "review_max_cards":
         return len(review["cards"]) <= spec["value"]
     raise ValueError(f"Unknown expectation kind: {kind!r}")

@@ -222,6 +222,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
             "## Summary",
             "",
             f"- Broken references: {summary['broken_reference']}",
+            f"- Placeholder text: {summary['placeholder_text']}",
             f"- Orphan candidates: {summary['orphan_candidate']}",
             f"- Unimplemented markers: {summary['unimplemented_marker']}",
             f"- Duplicate candidates: {summary['duplicate_candidate']}",

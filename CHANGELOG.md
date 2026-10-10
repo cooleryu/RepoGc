@@ -5,7 +5,21 @@ begin. The repository currently remains unreleased at version `0.0.0`.
 
 ## Unreleased
 
+### Changed
+
+- Broken references now come only from rendered Markdown links checked against
+  the repository, instead of path-like text. Code attributes, backticked names
+  and build output no longer produce false broken links; case mismatches and
+  moved files are reported. Report schema 0.8, review schema 0.2
+  ([decision 0016](docs/decisions/0016-narrow-first-release.md)).
+- `review` lists every certain problem, followed by at most five cards.
+- Duplicate detection skips impossible pairs early; a 3,865-document repository
+  went from over 11 minutes to under 30 seconds with identical results.
+
 ### Added
+
+- `placeholder_text` Findings for unreplaced template instructions.
+- Sentinels L1 and P1 for the two new checks.
 
 - Current-state review onboarding, a reproducible synthetic walkthrough with a
   staged-work counterexample, and a privacy-aware issue feedback template.

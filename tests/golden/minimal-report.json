@@ -8,8 +8,30 @@
         "dynamic_consumers": "UNKNOWN",
         "external_system_consumers": "UNKNOWN",
         "git_last_touch": "UNKNOWN",
-        "human_declared_root": "NOT_OBSERVED",
         "human_declared_retention": "NOT_OBSERVED",
+        "human_declared_root": "OBSERVED",
+        "root_reachability": "OBSERVED",
+        "runtime_access": "UNKNOWN",
+        "static_inbound_references": "NOT_OBSERVED"
+      },
+      "exists": true,
+      "incoming_edge_counts": {
+        "contextual": 0,
+        "contract_sensitive": 0,
+        "strong": 0
+      },
+      "path": "README.md"
+    },
+    {
+      "dimension_statuses": {
+        "build_test_ci_or_config_consumer": "NOT_OBSERVED",
+        "business_meaning": "NOT_INFERRED",
+        "contract_or_instruction_consumer": "NOT_OBSERVED",
+        "dynamic_consumers": "UNKNOWN",
+        "external_system_consumers": "UNKNOWN",
+        "git_last_touch": "UNKNOWN",
+        "human_declared_retention": "NOT_OBSERVED",
+        "human_declared_root": "NOT_OBSERVED",
         "root_reachability": "OBSERVED",
         "runtime_access": "UNKNOWN",
         "static_inbound_references": "OBSERVED"
@@ -30,8 +52,8 @@
         "dynamic_consumers": "UNKNOWN",
         "external_system_consumers": "UNKNOWN",
         "git_last_touch": "UNKNOWN",
-        "human_declared_root": "NOT_OBSERVED",
         "human_declared_retention": "NOT_OBSERVED",
+        "human_declared_root": "NOT_OBSERVED",
         "root_reachability": "NOT_APPLICABLE",
         "runtime_access": "UNKNOWN",
         "static_inbound_references": "OBSERVED"
@@ -52,8 +74,8 @@
         "dynamic_consumers": "DECLARED",
         "external_system_consumers": "UNKNOWN",
         "git_last_touch": "UNKNOWN",
-        "human_declared_root": "NOT_OBSERVED",
         "human_declared_retention": "NOT_OBSERVED",
+        "human_declared_root": "NOT_OBSERVED",
         "root_reachability": "OBSERVED",
         "runtime_access": "UNKNOWN",
         "static_inbound_references": "OBSERVED"
@@ -137,11 +159,11 @@
     },
     {
       "contract_sensitive": true,
-      "id": "0d642a6dc5274482332a5b059f9d7a6ac320ff5f",
+      "id": "06034153eb2336792b7bb4ed766fa606e893c947",
       "kind": "declared_contract_reference",
       "source": "SKILL.md",
       "strength": "strong",
-      "syntax": "path_token",
+      "syntax": "markdown_link",
       "target": "missing.md",
       "traversable": true
     },
@@ -160,17 +182,31 @@
     {
       "category": "broken_reference",
       "contract_sensitive": true,
-      "evidence": "unresolved path: missing.md",
-      "evidence_kind": "declared_contract_reference",
+      "evidence": "missing.md (not found)",
+      "evidence_kind": "markdown_link",
       "evidence_strength": "strong",
-      "id": "f78b549768d2b555aa7a7a515a12a957fafbfe23",
+      "id": "b557faa306467c20b23cae64fd7aa46cb5cbab1b",
       "review_subjects": [
         "SKILL.md",
         "missing.md"
       ],
-      "rule": "path_reference_target_missing",
+      "rule": "markdown_link_target_missing",
       "source": "SKILL.md",
       "target": "missing.md"
+    },
+    {
+      "category": "placeholder_text",
+      "contract_sensitive": false,
+      "evidence": "Report conduct issues via [INSERT CONTACT METHOD].",
+      "evidence_kind": "template_placeholder",
+      "evidence_strength": "strong",
+      "id": "670142578777c41ed6bc75e48ec987f2ddbdc989",
+      "review_subjects": [
+        "README.md"
+      ],
+      "rule": "bracket_placeholder",
+      "source": "README.md",
+      "target": null
     },
     {
       "category": "unimplemented_marker",
@@ -188,12 +224,13 @@
     }
   ],
   "reliability": "RELIABLE",
-  "report_schema_version": "0.7",
+  "report_schema_version": "0.8",
   "scan_integrity": "PASS",
   "summary": {
     "broken_reference": 1,
     "duplicate_candidate": 0,
     "orphan_candidate": 0,
+    "placeholder_text": 1,
     "unimplemented_marker": 1,
     "unreachable_candidate": 0
   }

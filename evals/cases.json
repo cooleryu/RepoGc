@@ -38,7 +38,7 @@
         {"kind": "reliability", "value": "RELIABLE"},
         {"kind": "finding_present", "source": "README.md", "category": "broken_reference"},
         {"kind": "artifact_reachable", "path": "README.md", "value": true},
-        {"kind": "review_unknowns", "subject": "README.md"},
+        {"kind": "review_problem_listed", "subject": "README.md"},
         {"kind": "review_max_cards", "value": 5}
       ],
       "ai_questions": [

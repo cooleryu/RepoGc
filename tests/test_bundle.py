@@ -38,7 +38,9 @@ class BundleTests(unittest.TestCase):
             config, result, report, review = self.fixture(root)
             bundle = build_bundle(result, report, config, review)
             self.assertEqual(len(bundle["payload"]["selection_ledger"]), 7)
-            self.assertEqual(sum(x["status"] == "not_shown" for x in bundle["payload"]["selection_ledger"]), 6)
+            ledger = bundle["payload"]["selection_ledger"]
+            # Broken links are certain, so every one is listed rather than sampled into a card.
+            self.assertTrue(all(x["reason"] == "listed_as_problem" for x in ledger))
             output = Path(temporary) / "bundle"
             write_bundle(root, output, bundle)
             before = (output / "bundle.json").read_bytes()
@@ -59,7 +61,8 @@ class BundleTests(unittest.TestCase):
                 lambda p: p.update(actions=["unauthorized"]),
                 lambda p: p["configuration"].update(use_git=True),
                 lambda p: p["sources"].update({"../escape": "text"}),
-                lambda p: p["review"]["cards"][0].update(subject="unrelated.md"),
+                lambda p: p["review"]["problems"][0].update(source="unrelated.md"),
+                lambda p: p["review"]["problems"].append(p["review"]["problems"][0]),
                 lambda p: p["review"]["safety"].update(action_verdict=True),
             ):
                 bad = copy.deepcopy(original)

@@ -4,9 +4,30 @@ import hashlib
 from typing import Any
 
 
-REVIEW_SCHEMA_VERSION = "0.1"
+REVIEW_SCHEMA_VERSION = "0.2"
 DEFAULT_REVIEW_LIMIT = 5
 MAX_REVIEW_LIMIT = 5
+# Certain findings are listed in full instead of being sampled into cards.
+PROBLEM_CATEGORIES = ("broken_reference", "placeholder_text")
+SHOWN_PROBLEM_LIMIT = 20
+
+
+def _problem(finding: dict[str, Any]) -> dict[str, Any]:
+    evidence = str(finding.get("evidence", ""))
+    if finding.get("category") == "placeholder_text":
+        if len(evidence) > 72:
+            evidence = evidence[:71] + "…"
+        detail = f"template text not replaced: {evidence}"
+    else:
+        detail = f"link {evidence}"
+    return {
+        "finding_id": finding.get("id"),
+        "category": finding.get("category"),
+        "source": finding.get("source"),
+        "line": finding.get("line"),
+        "rule": finding.get("rule"),
+        "detail": detail,
+    }
 
 
 def _concern_kind(category: str) -> str:
@@ -289,15 +310,18 @@ def build_review_payload(
         if isinstance(item, dict) and item.get("finding_id")
     }
     findings_by_source: dict[str, list[dict[str, Any]]] = {}
+    problems: list[dict[str, Any]] = []
     review_signal_count = 0
     for finding in findings:
         source = finding.get("source")
         profile = profile_by_path.get(str(source))
-        if (
-            source
-            and (profile is None or profile.get("role") != "generated")
-            and _is_default_review_evidence(finding, profile)
-        ):
+        if not source or (profile is not None and profile.get("role") == "generated"):
+            continue
+        if finding.get("category") in PROBLEM_CATEGORIES:
+            problems.append(_problem(finding))
+            review_signal_count += 1
+            continue
+        if _is_default_review_evidence(finding, profile):
             findings_by_source.setdefault(str(source), []).append(finding)
             review_signal_count += 1
 
@@ -375,6 +399,9 @@ def build_review_payload(
         "review_signal_count": review_signal_count,
         "suppressed_default_signal_count": len(findings) - review_signal_count,
         "review_subject_count": len(groups),
+        "problems": sorted(
+            problems, key=lambda item: (str(item["source"]), item["line"] or 0, str(item["detail"]))
+        ),
         "shown_count": len(cards),
         "ai_context_used": any(card["ai_context_used"] for card in cards),
         "cards": cards,
@@ -388,9 +415,11 @@ def build_review_payload(
 
 def render_review(payload: dict[str, Any]) -> str:
     cards = payload["cards"]
+    problems = payload.get("problems", [])
     lines = [
         (
-            f"RepoGC review — {len(cards)} item{'s' if len(cards) != 1 else ''} "
+            f"RepoGC review — {len(problems)} problem{'s' if len(problems) != 1 else ''}, "
+            f"{len(cards)} item{'s' if len(cards) != 1 else ''} "
             f"from {payload['raw_signal_count']} scan signals"
         ),
         "Read-only: no files changed, no keep/delete decision made.",
@@ -398,10 +427,26 @@ def render_review(payload: dict[str, Any]) -> str:
     if payload["ai_context_used"]:
         lines.append("Codex added repository context for selected evidence.")
     if payload["reliability"] == "PARTIAL":
-        lines.append("Note: the scan had incomplete coverage; treat every card cautiously.")
+        lines.append("Note: the scan had incomplete coverage; some files were not read.")
+    if problems:
+        file_count = len({problem["source"] for problem in problems})
+        lines.extend(
+            [
+                "",
+                f"Problems in {file_count} file{'s' if file_count != 1 else ''} — "
+                "each one was checked against the repository:",
+            ]
+        )
+        for problem in problems[:SHOWN_PROBLEM_LIMIT]:
+            lines.append(f"  {problem['source']}:{problem['line']}  {problem['detail']}")
+        hidden = len(problems) - SHOWN_PROBLEM_LIMIT
+        if hidden > 0:
+            lines.append(f"  … and {hidden} more (use --json for the full list)")
     if not cards:
-        lines.extend(["", "No distinct concern reached the default review surface."])
+        if not problems:
+            lines.extend(["", "No distinct concern reached the default review surface."])
         return "\n".join(lines)
+    lines.extend(["", "Worth a look — only you can say whether these are still needed:"])
     for index, card in enumerate(cards, start=1):
         lines.extend(
             ["", f"{index}. {card['headline']} — {card['subject']}"]

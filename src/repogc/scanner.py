@@ -6,14 +6,17 @@ import os
 import posixpath
 import re
 import unicodedata
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 
 from repogc.config import Config
-from repogc.git_info import last_touch, repository_info
+from repogc.git_info import last_touch, repository_files, repository_info
 from repogc.graph import build_evidence_graph, coverage_summary, matches_any
 from repogc.marker_context import MarkerHit, classify_marker_hits
-from repogc.models import Edge, Finding, Reference, ScanResult, SelfCheckResult
+from repogc.markdown_text import extract_links, is_markdown, local_link_path
+from repogc.placeholders import find_placeholders, is_template_file
+from repogc.models import Finding, Reference, ScanResult, SelfCheckResult
 
 
 PATH_PATTERN = re.compile(
@@ -236,9 +239,10 @@ def _finding(
     git_context: dict[str, str] | None = None,
     known_limitations: str | None = None,
     human_review: str | None = None,
+    identity: str | None = None,
 ) -> Finding:
     return Finding(
-        id=stable_id(source, evidence),
+        id=stable_id(source, identity or evidence),
         category=category,
         source=source,
         target=target,
@@ -257,6 +261,44 @@ def _finding(
     )
 
 
+def _link_target_state(
+    root: Path, relative: str, listings: dict[Path, set[str] | None]
+) -> tuple[str, str | None]:
+    """Classify a link target as present, missing, case_mismatch or unknown.
+
+    Names are compared exactly (after Unicode NFC), so a case difference is
+    reported even on case-insensitive file systems. Symbolic links count as
+    present and are not followed.
+    """
+    current = root
+    actual: list[str] = []
+    for part in relative.split("/") if relative else []:
+        if current not in listings:
+            try:
+                listings[current] = {
+                    unicodedata.normalize("NFC", name) for name in os.listdir(current)
+                }
+            except NotADirectoryError:
+                listings[current] = set()
+            except OSError:
+                listings[current] = None
+        names = listings[current]
+        if names is None:
+            return "unknown", None
+        wanted = unicodedata.normalize("NFC", part)
+        if wanted in names:
+            actual.append(wanted)
+            current = current / wanted
+            if current.is_symlink():
+                return "present", None
+            continue
+        folded = sorted(name for name in names if name.casefold() == wanted.casefold())
+        if folded:
+            return "case_mismatch", "/".join(actual + [folded[0]])
+        return "missing", None
+    return "present", None
+
+
 def scan_repository(root: Path, config: Config, self_check: SelfCheckResult) -> ScanResult:
     root = root.resolve()
     contents, skipped = collect_text_files(root, config)
@@ -269,9 +311,6 @@ def scan_repository(root: Path, config: Config, self_check: SelfCheckResult) -> 
     ]
     inbound = compute_inbound(references, scanned_paths)
     artifacts, edges = build_evidence_graph(contents, references, known_paths, config)
-    edges_by_target: dict[tuple[str, str], list[Edge]] = {}
-    for edge in edges:
-        edges_by_target.setdefault((edge.source, edge.target), []).append(edge)
     repository, git_problem = repository_info(root, config.use_git)
     touch_cache: dict[str, dict[str, str] | None] = {}
 
@@ -282,36 +321,113 @@ def scan_repository(root: Path, config: Config, self_check: SelfCheckResult) -> 
 
     findings_by_id: dict[str, Finding] = {}
 
-    for reference in references:
-        if reference.target in known_paths:
-            continue
-        reference_edges = edges_by_target[(reference.source, reference.target)]
-        representative_edge = min(
-            reference_edges,
-            key=lambda edge: (
-                edge.strength != "strong",
-                not edge.contract_sensitive,
-                edge.kind,
-            ),
-        )
-        evidence = f"unresolved path: {reference.raw}"
-        finding = _finding(
-            "broken_reference",
-            reference.source,
-            reference.target,
-            evidence,
-            "path_reference_target_missing",
-            line=reference.line,
-            contract_sensitive=any(edge.contract_sensitive for edge in reference_edges),
-            evidence_kind=representative_edge.kind,
-            evidence_strength=representative_edge.strength,
-            git_context=git_context(reference.source),
-            known_limitations=(
-                "The path may be generated, external, intentionally illustrative, or outside the configured scan surface."
-            ),
-            human_review="Confirm the intended resolution context before changing the reference.",
-        )
-        findings_by_id.setdefault(finding.id, finding)
+    # Broken links come only from rendered Markdown links; plain path-like text
+    # stays graph context. See docs/decisions/0016-narrow-first-release.md.
+    listings: dict[Path, set[str] | None] = {}
+    # Git-ignored files (build output) are not part of the repository. Files Git
+    # tracks still exist in the repository when a partial checkout omits them.
+    git_files = repository_files(root, config.use_git)
+    repository_paths: set[str] | None = None
+    tracked: set[str] = set()
+    if git_files is not None:
+        repository_paths = {unicodedata.normalize("NFC", path) for path in git_files[0]}
+        tracked = {unicodedata.normalize("NFC", path) for path in git_files[1]}
+        tracked |= {
+            parent.as_posix() for path in list(tracked) for parent in PurePosixPath(path).parents
+        }
+    # Test fixtures are often wrong on purpose, and templates are meant to be
+    # copied elsewhere, so neither check reads them.
+    checked_documents = {
+        source: text
+        for source, text in contents.items()
+        if is_markdown(source)
+        and not matches_any(source, config.test_globs)
+        and not is_template_file(source)
+        and (repository_paths is None or unicodedata.normalize("NFC", source) in repository_paths)
+    }
+
+    # A unique file with the same name usually means the target moved.
+    files_by_name: dict[str, list[str]] = {}
+    for path in sorted(git_files[1] if git_files is not None else scanned_paths):
+        files_by_name.setdefault(PurePosixPath(path).name, []).append(path)
+
+    def resolves(target: str) -> bool:
+        if unicodedata.normalize("NFC", target) in tracked:
+            return True
+        return _link_target_state(root, target, listings)[0] in {"present", "unknown"}
+
+    for source, text in checked_documents.items():
+        for link in extract_links(text):
+            target = local_link_path(source, link.destination)
+            if target is None:
+                continue
+            state, actual = _link_target_state(root, target, listings)
+            if state in {"present", "unknown"} or unicodedata.normalize("NFC", target) in tracked:
+                continue
+            if state == "missing" and (
+                _is_excluded(PurePosixPath(target), config.exclude_dirs)
+                or matches_any(target, config.generated_globs)
+            ):
+                continue
+            if not PurePosixPath(target).suffix and any(
+                resolves(candidate)
+                for candidate in (
+                    f"{target}.md",
+                    f"{target}.mdx",
+                    f"{target}/index.md",
+                    f"{target}/README.md",
+                )
+            ):
+                # Documentation sites resolve extensionless links to pages.
+                continue
+            if state == "case_mismatch":
+                evidence = f"{link.destination} (on disk: {actual})"
+                rule = "markdown_link_target_case_mismatch"
+            else:
+                same_name = files_by_name.get(PurePosixPath(target).name, [])
+                if len(same_name) == 1:
+                    evidence = f"{link.destination} (not found; same file name at {same_name[0]})"
+                else:
+                    evidence = f"{link.destination} (not found)"
+                rule = "markdown_link_target_missing"
+            finding = _finding(
+                "broken_reference",
+                source,
+                target,
+                evidence,
+                rule,
+                line=link.line,
+                contract_sensitive=matches_any(source, config.contract_globs),
+                evidence_kind="markdown_link",
+                evidence_strength="strong",
+                git_context=git_context(source),
+                known_limitations=(
+                    "Checked against the files on disk, relative to the linking document."
+                ),
+                human_review="Point the link at the current file or remove it.",
+                identity="markdown-link:" + hashlib.sha1(target.encode("utf-8")).hexdigest()[:16],
+            )
+            findings_by_id.setdefault(finding.id, finding)
+
+    for source, text in checked_documents.items():
+        for hit in find_placeholders(source, text):
+            finding = _finding(
+                "placeholder_text",
+                source,
+                None,
+                normalize_text(hit.text),
+                hit.rule,
+                line=hit.line,
+                contract_sensitive=matches_any(source, config.contract_globs),
+                evidence_kind="template_placeholder",
+                evidence_strength="strong",
+                git_context=git_context(source),
+                known_limitations="Matches known template instructions in rendered Markdown prose.",
+                human_review="Replace the template text with real content or remove it.",
+                identity="placeholder:"
+                + hashlib.sha1(normalize_text(hit.text).encode("utf-8")).hexdigest()[:16],
+            )
+            findings_by_id.setdefault(finding.id, finding)
 
     root_files = {normalize_relative_path(path) for path in config.root_files}
     root_files.update(artifact.path for artifact in artifacts if artifact.root)
@@ -461,12 +577,23 @@ def scan_repository(root: Path, config: Config, self_check: SelfCheckResult) -> 
         if Path(source).suffix.lower() in config.duplicate_suffixes
         and len(_normalized_document(text)) >= config.duplicate_min_chars
     ]
-    for index, (source, normalized_source) in enumerate(duplicate_documents):
-        for target, normalized_target in duplicate_documents[index + 1 :]:
+    # Compare in length order so the length bound can end each inner loop early,
+    # and use the character-count bound before the quadratic comparison.
+    # Pairs keep their path order, so results match a full pairwise scan.
+    character_counts = [Counter(text) for _, text in duplicate_documents]
+    by_length = sorted(range(len(duplicate_documents)), key=lambda i: len(duplicate_documents[i][1]))
+    for position, first in enumerate(by_length):
+        for second in by_length[position + 1 :]:
+            left, right = sorted((first, second))
+            source, normalized_source = duplicate_documents[left]
+            target, normalized_target = duplicate_documents[right]
             if (
                 _sequence_ratio_upper_bound(normalized_source, normalized_target)
                 < config.duplicate_threshold
             ):
+                break
+            shared = sum((character_counts[left] & character_counts[right]).values())
+            if 2.0 * shared / (len(normalized_source) + len(normalized_target)) < config.duplicate_threshold:
                 continue
             similarity = difflib.SequenceMatcher(None, normalized_source, normalized_target).ratio()
             if similarity < config.duplicate_threshold:

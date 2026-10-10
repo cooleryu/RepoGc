@@ -73,8 +73,12 @@ review is not exhaustive language, runtime or external-consumer analysis.
 
 ## What you get
 
-- Mechanical observations with source locations and explicit unknowns.
-- A short selection of review cards, not a list of things to delete.
+- **Problems you can fix right away**, each one certain: Markdown links to
+  files that no longer exist (with the new location when a file of the same
+  name exists elsewhere), and template text that was never replaced. Code,
+  build output and test fixtures are not checked, so they cannot cause noise.
+- **A short list worth a look**: documents nothing links to and stale status
+  notes. Only you can say whether they are still needed.
 - Optional complete local evidence snapshots, including unshown findings:
 
 ```sh

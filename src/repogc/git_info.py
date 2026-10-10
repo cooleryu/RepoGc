@@ -81,3 +81,22 @@ def last_touch(root: Path, relative_path: str, enabled: bool) -> dict[str, str] 
     if len(parts) != 2:
         return None
     return {"date": parts[0], "commit": parts[1]}
+
+
+def repository_files(root: Path, enabled: bool) -> tuple[set[str], set[str]] | None:
+    """Return (files that belong to the repository, files Git tracks).
+
+    Repository files are tracked or untracked-but-not-ignored. Tracked files
+    include entries that a sparse or partial checkout left off disk. Returns
+    None when Git is disabled or unavailable. ``ls-files`` reads the index and
+    ignore rules only; it does not run content filters.
+    """
+    if not enabled:
+        return None
+    tracked = _git(root, "ls-files", "-z", "--cached")
+    untracked = _git(root, "ls-files", "-z", "--others", "--exclude-standard")
+    if tracked.returncode != 0 or untracked.returncode != 0:
+        return None
+    tracked_files = {item for item in tracked.stdout.split("\0") if item}
+    untracked_files = {item for item in untracked.stdout.split("\0") if item}
+    return tracked_files | untracked_files, tracked_files

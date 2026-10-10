@@ -59,7 +59,7 @@ class LivenessProfileTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             (root / "SKILL.md").write_text(
-                "Required delivery artifact: missing_log.md\n",
+                "Required delivery artifact: [log](missing_log.md)\n",
                 encoding="utf-8",
             )
             result = scan_repository(root, liveness_config(), PASSING_SELF_CHECK)

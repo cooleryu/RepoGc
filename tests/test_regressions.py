@@ -157,7 +157,7 @@ class SafetyAndDeterminismTests(unittest.TestCase):
     def test_sentinel_covers_all_historical_cases(self) -> None:
         result = run_self_check()
         self.assertTrue(result.ok, result.failures)
-        self.assertEqual(len(result.checks), 15)
+        self.assertEqual(len(result.checks), 17)
 
     def test_scan_is_report_only_and_deterministic(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

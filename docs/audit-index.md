@@ -5,6 +5,8 @@ user onboarding path; start with the repository README and current status map.
 
 ## Decisions
 
+- [0016: narrow first release](decisions/0016-narrow-first-release.md) — broken Markdown links and template placeholders only; supersedes 0015.
+- [0015: reference evidence policy](decisions/0015-reference-evidence-policy.md) — superseded draft; kept for history.
 - [0014: current-state review and public preview](decisions/0014-public-preview.md)
 
 - [0001: Phase 0 bootstrap](decisions/0001-phase-0-bootstrap.md)

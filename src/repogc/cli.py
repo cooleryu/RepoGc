@@ -294,9 +294,10 @@ def command_scan(args: argparse.Namespace) -> int:
         write_reports(root, payload, markdown_path, json_path)
     counts = result.category_counts()
     print(
-        "RepoGC {status}: broken={broken} orphan={orphan} markers={markers} duplicates={duplicates} unreachable={unreachable}".format(
+        "RepoGC {status}: broken={broken} placeholders={placeholders} orphan={orphan} markers={markers} duplicates={duplicates} unreachable={unreachable}".format(
             status=result.reliability,
             broken=counts["broken_reference"],
+            placeholders=counts["placeholder_text"],
             orphan=counts["orphan_candidate"],
             markers=counts["unimplemented_marker"],
             duplicates=counts["duplicate_candidate"],

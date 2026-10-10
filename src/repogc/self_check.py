@@ -7,6 +7,8 @@ from repogc.config import Config
 from repogc.graph import build_evidence_graph
 from repogc.liveness import build_liveness_profiles
 from repogc.marker_context import MarkerHit, classify_marker_hits
+from repogc.markdown_text import extract_links
+from repogc.placeholders import find_placeholders
 from repogc.models import SelfCheckResult
 from repogc.scanner import compute_inbound, extract_references, stable_id
 
@@ -208,6 +210,23 @@ def run_self_check() -> SelfCheckResult:
         codex_skill.root
         and codex_skill.reachable
         and codex_skill.reachable_from == codex_skill_path,
+    )
+
+    l1_links = extract_links(
+        "[real](real.md) `[code](code.md)` actual.markdown\n```\n[fenced](fenced.md)\n```\n"
+    )
+    check(
+        "L1 broken links come only from rendered Markdown links",
+        [link.destination for link in l1_links] == ["real.md"],
+    )
+
+    p1_hits = find_placeholders(
+        "SUPPORT.md",
+        "Contact [INSERT CONTACT METHOD]\nRun `INSERT KEY HERE`\nReplace <your-token>.\n",
+    )
+    check(
+        "P1 template placeholders exclude code and reader instructions",
+        [hit.line for hit in p1_hits] == [1],
     )
 
     annotation_report = {

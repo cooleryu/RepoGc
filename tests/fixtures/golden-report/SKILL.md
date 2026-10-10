@@ -2,4 +2,4 @@
 
 Required delivery artifact: process_log.md
 
-Required audit artifact: missing.md
+Required audit artifact: [audit record](missing.md)

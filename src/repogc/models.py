@@ -134,6 +134,7 @@ class ScanResult:
     def category_counts(self) -> dict[str, int]:
         categories = (
             "broken_reference",
+            "placeholder_text",
             "orphan_candidate",
             "unimplemented_marker",
             "duplicate_candidate",

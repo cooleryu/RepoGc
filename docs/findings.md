@@ -8,7 +8,8 @@ delete.
 
 | Category | Mechanical meaning | Does not establish |
 |---|---|---|
-| `broken_reference` | A supported path reference resolves to a target that does not exist | That the source file is wrong or unneeded |
+| `broken_reference` | A rendered Markdown link, image, reference definition or HTML `href`/`src` points to a repository path that does not exist, or differs from it only in letter case | Why the target is gone |
+| `placeholder_text` | Rendered Markdown prose still contains known template instructions, such as an unreplaced `[INSERT CONTACT METHOD]` | What the replacement text should be |
 | `orphan_candidate` | No non-self inbound reference was observed in the configured legacy orphan surface | That no human, dynamic, external, or process consumer exists |
 | `unimplemented_marker` | A configured unfinished token was observed with lexical context | That the commitment is current or belongs to production code |
 | `duplicate_candidate` | Normalized text similarity met the configured threshold | Equivalent authority, purpose, or safe consolidation |

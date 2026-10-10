@@ -7,7 +7,7 @@ from dataclasses import asdict
 from pathlib import Path, PurePosixPath
 from typing import Any
 
-from repogc import REPORT_SCHEMA_VERSION
+from repogc import SUPPORTED_REPORT_SCHEMA_VERSIONS
 from repogc.config import Config
 from repogc.models import ScanResult
 
@@ -69,11 +69,24 @@ def _ledger(report: dict, review: dict) -> list[dict]:
             raise ValueError("Card source or count does not match its Findings")
         for finding_id in members:
             references[finding_id].append(card_id)
+    listed: set[str] = set()
+    for problem in review.get("problems", []):
+        finding_id = problem["finding_id"]
+        if (finding_id not in references or finding_id in listed
+                or by_id[finding_id]["source"] != problem["source"]):
+            raise ValueError("Invalid review problem reference")
+        listed.add(finding_id)
+
+    def reason(finding_id: str) -> str:
+        if finding_id in listed:
+            return "listed_as_problem"
+        return "selected_by_review" if references[finding_id] else "not_selected_by_review"
+
     return [{
         "finding_id": item["id"], "source": item["source"],
-        "status": "shown" if references[item["id"]] else "not_shown",
+        "status": "shown" if references[item["id"]] or item["id"] in listed else "not_shown",
         "card_ids": sorted(references[item["id"]]),
-        "reason": "selected_by_review" if references[item["id"]] else "not_selected_by_review",
+        "reason": reason(item["id"]),
         "next_step": "investigate; not a resolution or authorization",
     } for item in findings]
 
@@ -117,7 +130,7 @@ def _validate_bundle(bundle: dict, expected_sha256: str | None) -> dict:
     if canonical_digest(report) != payload["report_sha256"]:
         raise ValueError("Report digest mismatch")
     meta = report["metadata"]
-    if (meta["report_schema_version"] != REPORT_SCHEMA_VERSION
+    if (meta["report_schema_version"] not in SUPPORTED_REPORT_SCHEMA_VERSIONS
             or meta["reliability"] not in {"RELIABLE", "PARTIAL"}
             or meta["self_check"]["ok"] is not True or meta["self_check"]["failures"]):
         raise ValueError("Unsupported or unreliable mechanical report")
@@ -137,7 +150,7 @@ def _validate_bundle(bundle: dict, expected_sha256: str | None) -> dict:
         if line is not None and (type(line) is not int or not 1 <= line <= len(sources[source].splitlines())):
             raise ValueError("Finding line outside source snapshot")
     review = payload["review"]
-    if (review["review_schema_version"] != "0.1" or review["ai_context_used"] is not False
+    if (review["review_schema_version"] not in {"0.1", "0.2"} or review["ai_context_used"] is not False
             or review["reliability"] != meta["reliability"]
             or review["raw_signal_count"] != len(report["findings"])
             or review["shown_count"] != len(review["cards"])):
